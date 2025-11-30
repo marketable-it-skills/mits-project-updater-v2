@@ -1,0 +1,311 @@
+{
+  "totalMark": 16.5,
+  "wsosSections": {
+    "1": "Work organization and self-management",
+    "3": "Design Implementation"
+  },
+  "subCriterions": [
+    {
+      "name": "Home page",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "Home page is reachable on index.html",
+          "maxMark": 0.5,
+          "wsosSection": 1,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Home page contains visualization video",
+          "maxMark": 0.2,
+          "wsosSection": 3,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Home page contains brief project overview",
+          "maxMark": 0.2,
+          "wsosSection": 3,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Home page contains at least 1 key fact",
+          "maxMark": 0.2,
+          "wsosSection": 3,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Home page contains some partner/sponsor logos",
+          "maxMark": 0.2,
+          "wsosSection": 3,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Home page contains a map with the location of the farm highlighted in any way",
+          "maxMark": 0.2,
+          "wsosSection": 3,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Video automatically plays without interaction when opening the page",
+          "maxMark": 0.15,
+          "wsosSection": 3,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Video loops when it ends",
+          "maxMark": 0.15,
+          "wsosSection": 3,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Video controls are always hidden",
+          "maxMark": 0.15,
+          "wsosSection": 3,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Video takes the full browser width",
+          "maxMark": 0.15,
+          "wsosSection": 3,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Video keeps original aspect ratio on resizing",
+          "maxMark": 0.15,
+          "wsosSection": 3,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "judgement",
+          "description": "Home page design",
+          "maxMark": 1.25,
+          "wsosSection": 3,
+          "judgementScoreDescription": [
+            "Poor implementation",
+            "Basic implementation with issues",
+            "Good implementation with minor issues",
+            "Excellent implementation following best practices"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Investors page",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "Investors page offers the investment option: Fund one or more wind turbines",
+          "maxMark": 0.4,
+          "wsosSection": 3,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Investors page offers the investment option: Become a presenting sponsor",
+          "maxMark": 0.3,
+          "wsosSection": 3,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Investors page offers the investment option: Support the project with a variable amount of money",
+          "maxMark": 0.3,
+          "wsosSection": 3,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Investment form contains contact data fields",
+          "maxMark": 0.25,
+          "wsosSection": 3,
+          "extraDescription": "Contains at least fields for a name, email, address, and phone number",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Investment form shows specific fields for fund one or more wind turbines option",
+          "maxMark": 0.3,
+          "wsosSection": 3,
+          "extraDescription": "Short text input, file upload field",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Investment form shows specific fields for become a presenting sponsor option",
+          "maxMark": 0.25,
+          "wsosSection": 3,
+          "extraDescription": "File upload field",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Investment form shows specific fields for support the project with a variable amount of money option",
+          "maxMark": 0.2,
+          "wsosSection": 3,
+          "extraDescription": "Amount input field",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "judgement",
+          "description": "Investors page design",
+          "maxMark": 1.25,
+          "wsosSection": 3,
+          "judgementScoreDescription": [
+            "Poor implementation",
+            "Basic implementation with issues",
+            "Good implementation with minor issues",
+            "Excellent implementation following best practices"
+          ]
+        },
+        {
+          "type": "judgement",
+          "description": "Form field types and validation",
+          "maxMark": 0.75,
+          "wsosSection": 3,
+          "judgementScoreDescription": [
+            "Poor implementation",
+            "Basic implementation with issues",
+            "Good implementation with minor issues",
+            "Excellent implementation following best practices"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Visitor tours page",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "Visitor tours page contains required information",
+          "maxMark": 0.5,
+          "wsosSection": 3,
+          "extraDescription": "List of planned tours with date & time",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Map explaining the locations",
+          "maxMark": 0.25,
+          "wsosSection": 3,
+          "extraDescription": "A map is visible on the page that shows where the farm will be located and where the tour's meeting point is",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "judgement",
+          "description": "Visitor tours page design",
+          "maxMark": 1.25,
+          "wsosSection": 3,
+          "judgementScoreDescription": [
+            "Poor implementation",
+            "Basic implementation with issues",
+            "Good implementation with minor issues",
+            "Excellent implementation following best practices"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Standards",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "Accessibility standards",
+          "maxMark": 1.5,
+          "wsosSection": 3,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "W3C HTML validations",
+          "maxMark": 0.75,
+          "wsosSection": 3,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "W3C CSS validations",
+          "maxMark": 0.75,
+          "wsosSection": 3,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "No server-side or client-side framework is used",
+          "maxMark": 1,
+          "wsosSection": 1,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "judgement",
+          "description": "SEO",
+          "maxMark": 1,
+          "wsosSection": 3,
+          "judgementScoreDescription": [
+            "Poor implementation",
+            "Basic implementation with issues",
+            "Good implementation with minor issues",
+            "Excellent implementation following best practices"
+          ]
+        }
+      ]
+    }
+  ]
+}

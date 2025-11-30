@@ -1,0 +1,12 @@
+{
+  "name": "marking-scheme-converter",
+  "version": "1.0.0",
+  "description": "Convert Excel marking scheme to JSON",
+  "main": "convert.js",
+  "scripts": {
+    "start": "node convert.js"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}

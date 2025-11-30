@@ -1,0 +1,809 @@
+{
+  "totalMark": 80.00000000000001,
+  "wsosSections": {
+    "1": "Work organization and management",
+    "2": "Communication and interpersonal skills",
+    "3": "Design implementation",
+    "4": "Front-end development",
+    "5": "Back-end development"
+  },
+  "subCriterions": [
+    {
+      "name": "Auth",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "shouldReturnAccessToken_whenCredentialsAreValid",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnBadRequest_whenNoDataProvided",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnUnauthorized_whenCredentialsAreInvalid",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldLogoutUser_whenTokenIsValid",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnUnauthorized_whenTokenIsMissing",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnUnauthorized_whenTokenIsExpired",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldRegisterAccount_whenDataIsValid",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnUnauthorized_whenEmailIsDuplicate",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnBadRequest_whenRequiredFieldsAreMissing",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Bicycles",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "shouldReturnBicycle_whenIdIsValid",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnNotFound_whenIdDoesNotExist",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnUnauthorized_whenTokenIsMissing",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnUnauthorized_whenTokenIsInvalid",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldRateRental_whenDataIsValid",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnForbidden_whenRentalAlreadyRated",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnForbidden_whenOwnerHasInsufficientFunds",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnNotFound_whenRentalIdDoesNotExist",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnUnauthorized_whenTokenIsMissing",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnUnauthorized_whenTokenIsInvalid",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "repair_withTypeWash_shouldDecreaseWearBy10",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "repair_withTypeRepair_shouldDecreaseWearBy25",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "repair_withTypeTires_shouldResetWearTo0",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "repair_withTypeChain_shouldDecreaseWearBy30",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "repair_withInsufficientBalance_shouldReturnConflict",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "repair_withInvalidBicycleId_shouldReturnNotFound",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "repair_withoutAuthToken_shouldReturnUnauthorized",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "repair_withInvalidAuthToken_shouldReturnUnauthorized",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "retrieve_withValidBicycleId_shouldReturnRentals",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "retrieve_withInvalidBicycleId_shouldReturnNotFound",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "retrieve_withoutAuthToken_shouldReturnUnauthorized",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "retrieve_withInvalidAuthToken_shouldReturnUnauthorized",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "retrieve_withValidAuthToken_shouldReturnBicycles",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "retrieve_withoutAuthToken_shouldReturnUnauthorized",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "retrieve_withInvalidAuthToken_shouldReturnUnauthorized",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Rental",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "completeRental_withValidAuthToken_shouldSucceed",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "completeRental_shouldReturnBadRequest_whenCompletingWithoutPhotos",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "completeRental_shouldReturnBadRequest_whenCompletingWithInvalidRating",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "completeRental_withoutAuthToken_shouldReturnUnauthorized",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "completeRental_withInvalidAuthToken_shouldReturnUnauthorized",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "rentBicycle_withValidAuthToken_shouldSucceed",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "rentBicycle_whenAlreadyRenting_shouldReturnConflict",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "rentBicycle_whenBicycleAlreadyTaken_shouldReturnConflict",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "rentBicycle_shouldReturnNotFound_whenPromoCodeDoesNotExist",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "rentBicycle_shouldReturnConflict_whenPromoCodeIsInvalid",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "rentBicycle_shouldReturnConflict_whenUserHasInsufficientFunds",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "rentBicycle_shouldReturnConflict_whenBicycleHasHighWearPercentage",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "rentBicycle_withoutAuthToken_shouldReturnUnauthorized",
+          "maxMark": 0.2,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "rentBicycle_withInvalidAuthToken_shouldReturnUnauthorized",
+          "maxMark": 0.2,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tariffs",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "getPrice_withStaticTariff_shouldReturnFixedPrice",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "getPrice_withDynamicTariff_shouldReturnCalculatedPrice",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "getPrice_withoutAuthToken_shouldReturnUnauthorized",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "getPrice_withInvalidAuthToken_shouldReturnUnauthorized",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnTariffs_whenUserIsAuthenticated",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnUnauthorized_whenNoTokenProvided",
+          "maxMark": 0.2,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnUnauthorized_whenInvalidTokenProvided",
+          "maxMark": 0.2,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Transactions",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "shouldIncreaseBalanceAndCreateTransaction_whenTopUpWithValidAmount",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnBadRequest_whenTopUpWithZeroAmount",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnUnauthorized_whenRepairBicycleWithoutToken",
+          "maxMark": 0.2,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnUnauthorized_whenRepairBicycleWithInvalidToken",
+          "maxMark": 0.2,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldDecreaseBalanceAndCreateTransaction_whenWithdrawWithValidAmount",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnUnauthorized_whenRepairBicycleWithoutToken",
+          "maxMark": 0.2,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnUnauthorized_whenRepairBicycleWithInvalidToken",
+          "maxMark": 0.2,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "shouldReturnNull_whenUserHasNoCurrentRental",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnUnauthorized_whenRequestWithoutToken",
+          "maxMark": 0.2,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnUnauthorized_whenRequestWithInvalidToken",
+          "maxMark": 0.2,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "bicycles_shouldReturnUserBicycles_whenUserIsAuthenticated",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "bicycles_shouldReturnUnauthorized_whenRequestWithoutToken",
+          "maxMark": 0.2,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "bicycles_shouldReturnUnauthorized_whenRequestWithInvalidToken",
+          "maxMark": 0.2,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "currentUser_shouldReturnCurrentUser_whenUserIsAuthenticated",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "currentUser_shouldReturnUnauthorized_whenRequestWithoutToken",
+          "maxMark": 0.2,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "currentUser_shouldReturnUnauthorized_whenRequestWithInvalidToken",
+          "maxMark": 0.2,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "currentWork_shouldReturnEmptyObject_whenUserHasNoWork",
+          "maxMark": 0.2,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "currentWork_shouldRetrieveCurrentWork_whenUserHasActiveWork",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "currentWork_shouldReturnUnauthorized_whenRequestWithoutToken",
+          "maxMark": 0.2,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "currentWork_shouldReturnUnauthorized_whenRequestWithInvalidToken",
+          "maxMark": 0.2,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Works",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "shouldReturnWorks_whenUserIsAuthenticated",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnUnauthorized_whenRequestWithoutToken",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnUnauthorized_whenRequestWithInvalidToken",
+          "maxMark": 0.2,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldSendWorkRequest_whenUserIsAuthenticated",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnUnauthorized_whenWorksIdRequestWithoutToken",
+          "maxMark": 0.2,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnUnauthorized_whenWorksIdRequestWithInvalidToken",
+          "maxMark": 0.2,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        }
+      ]
+    },
+    {
+      "name": "External Services",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "shouldReturnTrafficData_whenRequestIsValid",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldReturnWeatherData_whenRequestIsValid",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "shouldRetrieveOauthLink_whenRequestIsValid",
+          "maxMark": 0.25,
+          "wsosSection": 5,
+          "extraDescription": "Check manually",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        }
+      ]
+    }
+  ]
+}
