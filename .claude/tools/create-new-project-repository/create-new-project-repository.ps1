@@ -44,9 +44,9 @@ catch {
     Fail "Unable to determine the repository root relative to the script location."
 }
 
-$namePattern = '^s17-[a-z]{2}[0-9]{4}-module_[a-z0-9]+-[a-z0-9-]+$'
+$namePattern = '^s17-[a-z]{2}[0-9]{4}(-[a-z]{2}-r[0-9]+)?-module_[a-z0-9]+-[a-z0-9-]+$'
 if (-not ($RepositoryName -match $namePattern)) {
-    Fail "Repository name '$RepositoryName' does not match the required pattern 's17-[a-z]{2}[0-9]{4}-module_[a-z0-9]+-[a-z0-9-]+'. Please use lowercase letters, digits, and hyphens."
+    Fail "Repository name '$RepositoryName' does not match the required pattern 's17-[a-z]{2}[0-9]{4}(-[a-z]{2}-r[0-9]+)?-module_[a-z0-9]+-[a-z0-9-]+'. Please use lowercase letters, digits, and hyphens. Optional: -[country]-r[round] (e.g. -hu-r2)."
 }
 
 if (-not (Get-Command gh -ErrorAction SilentlyContinue)) {

@@ -1,0 +1,363 @@
+{
+  "totalMark": 16,
+  "wsosSections": {
+    "1": "Work organization and self-management",
+    "2": "Communication and interpersonal skills",
+    "4": "Front-End Development",
+    "5": "Back-End Development"
+  },
+  "subCriterions": [
+    {
+      "name": "Task 1 - Writing automated tests",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "Tests passing",
+          "maxMark": 1,
+          "wsosSection": 5,
+          "extraDescription": "There is at least one test with an assertion and all tests are passing.",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Test coverage at least 80%",
+          "maxMark": 0.5,
+          "wsosSection": 5,
+          "extraDescription": "The test coverage of lines and conditionals is at least 80%",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Test coverage is 100%",
+          "maxMark": 1,
+          "wsosSection": 5,
+          "extraDescription": "The test coverage of lines and conditionals is 100%",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "There is a maximum of 15 mutants surviving",
+          "maxMark": 1,
+          "wsosSection": 5,
+          "extraDescription": "A maximum of 15 mutants survive after running the tests with a mutation testing framework.",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "There is a maximum of 3 mutants surviving",
+          "maxMark": 1,
+          "wsosSection": 5,
+          "extraDescription": "A maximum of 3 mutants survive after running the tests with a mutation testing framework.",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "judgement",
+          "description": "Tests grouped logically",
+          "maxMark": 1,
+          "wsosSection": 1,
+          "judgementScoreDescription": [
+            "Tests are not grouped logically, resulting in a disorganized and confusing structure.",
+            "Tests are partially grouped logically, but there are inconsistencies or unclear organization that may lead to some confusion.",
+            "Tests are generally grouped logically, making it relatively easy for users to find and navigate through different test categories. However, there might be a few instances where the grouping could be improved for better clarity.",
+            "Tests are well-grouped logically, providing users with clear and intuitive categorization. It is easy to locate and access specific tests based on their related topics or themes."
+          ]
+        },
+        {
+          "type": "judgement",
+          "description": "Tests are easy to understand",
+          "maxMark": 0.5,
+          "wsosSection": 2,
+          "judgementScoreDescription": [
+            "The unit tests lack clarity and are challenging to understand. The language used is overly technical, convoluted, or fails to follow the recognizable \"Arrange, Act, Assert\" structure commonly associated with unit tests. As a result, users may struggle to comprehend the purpose, steps, or expected outcomes of the tests.",
+            "The unit tests are somewhat understandable, but there are instances where the language or structure could be improved for better clarity. While there may be elements of the \"Arrange, Act, Assert\" pattern, it is not consistently followed or clearly recognizable, requiring users to make additional effort to interpret the tests' purpose and expected results.",
+            "The unit tests are generally written in a way that is easy to understand. The language used is clear and concise, and the \"Arrange, Act, Assert\" pattern is recognizable, allowing users to grasp the purpose and expected outcomes of the tests with relative ease.",
+            "The unit tests are exceptionally well-written and easy to understand. The language used is simple, precise, and effectively follows the \"Arrange, Act, Assert\" pattern, ensuring that users can easily identify the different sections and comprehend the purpose, steps, and expected results of the tests."
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Task 2 - Creating a progressive web app",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "The application is installable on a device",
+          "maxMark": 1,
+          "wsosSection": 4,
+          "extraDescription": "There is an \"Install [app name]\" button in the URL bar in Chrome",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "All news are displayed in a list with their title and image",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "When there is no internet, the last loaded news (titles) are displayed when the app is opened",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "When there is no internet, the images of the news in the list are still displayed",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "When there is internet again, new articles are loaded again",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "extraDescription": "If there is internet, the API is always called and not just cached responses are returned",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "New articles are polled in the background while the app is open and notification is sent if a new article is detected",
+          "maxMark": 1,
+          "wsosSection": 4,
+          "extraDescription": "The app still needs to be open in the background / in a tab for this to work (since real push notifications are not available in an offline environment). Trigger a new news article by calling the trigger endpoint of the provided API",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The app opens to the list of news articles when the notification is clicked",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Task 3 - Creating web components - General",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "The attributes & events of all components are exactly as requested",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "There is an example website which includes examples for each component as requested",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Task 3 - Creating web components - Limited Textarea",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "A text area and a text showing the character limit are rendered as specified",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "\"characters left\" text is below the text area and has the color #666, textarea takes full available width and is not resizable",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The color of the characters left changes according to the remaining number",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "#000 by default, #f0620d if below 10%, #ea1010 when limit exceeded",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Component does not inherit any other global styles besides the font",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "extraDescription": "To test, add <style>textarea { background: red; }</style> to the page",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Attributes of the component can change at any time",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Change the \"maxchars\" attribute on the element using the browsers dev tools, the change should be reflected immediately on the page without any other interaction",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The \"change\" event is fired",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "The event data should be logged to the browser's console with the correct data (value and whether it is valid)",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The \"change\" event is fired immediately for each character",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "While you keep pressing down one key on the keyboard, it should insert it multiple times into the text field and the event should be triggered the same amount of times",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Task 3 - Creating web components - Confirmation Modal",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "Modal opens automatically on page load",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The label attribute is used for the button and the children for the content of the modal",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Attributes of the component can change at any time",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Change the label attribute on the element and the children using the browsers dev tools, the change should be reflected immediately on the page without any other interaction",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The rest of the website has an overlay",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Overlay has color rgba(0, 0, 0, 0.3)",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The button to close it is align to the right in the modal",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The \"confirm\" event is fired",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "The event should be logged to the browser's console",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Task 3 - Creating web components - Count Down",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "The date attribute takes a valid ISO 8601 string and the message attribute is displayed once the date is reached",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "The example website contains one timer which counts down to 15s in the future on page load and another one which counts down to 01.01.2024 00:00:00",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Remaining time is displayed in the correct format",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "`10 days 17:03:10 left` (hours, minutes, and seconds have always 2 digits)",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Remaining time gets updated automatically once a second",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Attributes of the component can change at any time",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Change the date & message attribute on the element using the browsers dev tools, the change should be reflected immediately on the page without any other interaction",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        }
+      ]
+    }
+  ]
+}

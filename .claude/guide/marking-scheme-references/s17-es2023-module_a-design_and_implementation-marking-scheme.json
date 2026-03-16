@@ -1,0 +1,207 @@
+{
+  "totalMark": 17,
+  "wsosSections": {
+    "1": "Work organization and management",
+    "2": "Communication and interpersonal skills",
+    "3": "Website Design",
+    "4": "Layout",
+    "5": "Front-End Development",
+    "6": "Back-End Development",
+    "7": "Content Management Systems"
+  },
+  "subCriterions": [
+    {
+      "name": "Website Layout",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "Header, Navigation, and Footer are on all pages",
+          "maxMark": 0.5,
+          "wsosSection": 3,
+          "extraDescription": "Header, Navigation, and Footer elements are on all pages and looking the same on all pages (except highlighting of the current active link is allowed)",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "judgement",
+          "description": "Common website elements (header, navigation, footer) are responsive",
+          "maxMark": 0.5,
+          "wsosSection": 3,
+          "judgementScoreDescription": [
+            "All common elements are not responsive at all",
+            "At least one common element is responsive when changing between the defined viewports",
+            "All common elements look good on the defined viewports, but not between them",
+            "When scaling the browser between 360x640 and 1920x1080 (not just the defined viewports), all common elements always responds very well (no horizontal scrolling, everything readable, good breakpoints)"
+          ]
+        },
+        {
+          "type": "judgement",
+          "description": "Pages (home, product, pricing, team) are responsive",
+          "maxMark": 1,
+          "wsosSection": 3,
+          "judgementScoreDescription": [
+            "All pages are not responsive at all",
+            "At least one page is responsive when changing between the defined viewports",
+            "All pages look good on the defined viewports, but not between them",
+            "When scaling the browser between 360x640 and 1920x1080 (not just the defined viewports), all pages always responds very well (no horizontal scrolling, everything readable, good breakpoints)"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Website design",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "Home page contains required information",
+          "maxMark": 0.5,
+          "wsosSection": 3,
+          "extraDescription": "Product name, product image, links to product & pricing pages",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Product page contains required information",
+          "maxMark": 0.5,
+          "wsosSection": 3,
+          "extraDescription": "Lists all available APIs with their features",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Pricing page contains required information",
+          "maxMark": 0.5,
+          "wsosSection": 3,
+          "extraDescription": "Pricing per available API",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Team page contains required information",
+          "maxMark": 0.5,
+          "wsosSection": 3,
+          "extraDescription": "All team members and the core values of the company",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Header includes a product name",
+          "maxMark": 0.5,
+          "wsosSection": 3,
+          "extraDescription": "The header includes a product name in form of text or logo",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Footer includes copyright notice",
+          "maxMark": 0.5,
+          "wsosSection": 3,
+          "extraDescription": "The footer includes a copyright notice",
+          "calculation": {
+            "type": "true-or-false"
+          },
+          "maxMark": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Standards",
+      "aspects": [
+        {
+          "type": "judgement",
+          "description": "Accessibility standards",
+          "maxMark": 1.5,
+          "wsosSection": 3,
+          "judgementScoreDescription": [
+            "The axe browser extension reports more than 3 violations per implemented page",
+            "The axe browser extension reports max 3 violations per implemented page",
+            "The axe browser extension reports max 2 violations per implemented page",
+            "The axe browser extension reports no violations on all pages and all pages are implemented"
+          ]
+        },
+        {
+          "type": "judgement",
+          "description": "SEO",
+          "maxMark": 0.75,
+          "wsosSection": 3,
+          "judgementScoreDescription": [
+            "No SEO best practices implemented",
+            "Correct usage of heading tags (one h1, correct hierarchy) and some semantic tags (<header>, <nav>, <main>, <footer>, <article> etc instead of just divs) on some pages",
+            "Compelling title tag and meta tags for some pages",
+            "Compelling title tag and meta tags for all pages, always used heading tags correctly, and always used semantic tags where appropriate on all pages"
+          ]
+        },
+        {
+          "type": "judgement",
+          "description": "W3C HTML validations",
+          "maxMark": 0.75,
+          "wsosSection": 3,
+          "judgementScoreDescription": [
+            "The W3C validator reports more than 3 HTML errors per implemented page",
+            "The W3C validator reports max 3 HTML errors per implemented page",
+            "The W3C validator reports max 2 HTML errors per implemented page",
+            "The W3C validator reports no HTML errors on all pages and all pages are implemented"
+          ]
+        },
+        {
+          "type": "judgement",
+          "description": "W3C CSS validations",
+          "maxMark": 0.75,
+          "wsosSection": 3,
+          "judgementScoreDescription": [
+            "The W3C validator reports more than 3 CSS errors per implemented page",
+            "The W3C validator reports max 3 CSS errors per implemented page",
+            "The W3C validator reports max 2 CSS errors per implemented page",
+            "The W3C validator reports no CSS errors on all pages and all pages are implemented"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Organization",
+      "aspects": [
+        {
+          "type": "measurement",
+          "description": "No server-side or client-side framework is used",
+          "maxMark": 1,
+          "wsosSection": 1,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Home page is reachable at the index.html",
+          "maxMark": 1,
+          "wsosSection": 2,
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "judgement",
+          "description": "Cross browser compatibility",
+          "maxMark": 0.75,
+          "wsosSection": 3,
+          "judgementScoreDescription": [
+            "The website is completely broken on either Firefox or Chrome",
+            "There are some major differences or whole sections look different",
+            "There are some minor differences but it mostly looks the same",
+            "The website looks exactly the same in Chrome and Firefox (except some unsolvable browser specific differences)"
+          ]
+        }
+      ]
+    }
+  ]
+}

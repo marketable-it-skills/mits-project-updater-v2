@@ -29,8 +29,8 @@ param(
 )
 
 # Validate repository name format
-if ($RepositoryName -notmatch '^s17-[a-z]{2}\d{4}-module_[a-z]-[a-z0-9-]+$') {
-    Write-Error "Invalid repository name format. Expected format: s17-[year]-module_[letter]-[short-description]"
+if ($RepositoryName -notmatch '^s17-[a-z]{2}[0-9]{4}(-[a-z]{2}-r[0-9]+)?-module_[a-z0-9]+-[a-z0-9-]+$') {
+    Write-Error "Invalid repository name format. Expected format: s17-[year]-module_[letter]-[short-description] or s17-[year]-[country]-r[round]-module_[letter]-[short-description]"
     Write-Error "Example: s17-ws2024-module_d-lyon-mobile-web-service"
     exit 1
 }

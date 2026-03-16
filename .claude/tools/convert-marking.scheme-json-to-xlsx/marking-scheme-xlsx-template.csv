@@ -1,0 +1,70 @@
+"Sub
+Criterion
+ID","Sub Criterion
+Name or Description",Day of Marking,"Aspect
+Type
+M = Meas
+J = Judg",Aspect - Description,Judg Score,"Extra Aspect Description (Meas or Judg)
+OR
+Judgement Score Description (Judg only)","Requirement
+(Measurement Only)",WSOS Section,"Calculation Row 
+(Export only)","Max
+Mark"
+C1,Organization,2,,,,,,,,
+,,,M,Database seed completeness: Running the seed.sql script creates the structure and required users as specified with hashed password,,,,1,1,1
+,,,M,API was implemented to follow spec: Base path,,Correct base path,,2,1,0.25
+,,,M,API was implemented to follow spec: path extension,,"No trailing extensions like "".php"" or ""/index.php"" or required trailing ""/""",,2,1,0.25
+,,,M,API was implemented to follow spec: content type,,"Response content type is always ""application/json"" or ""application/problem+json"" for errors",,2,1,0.25
+C2,Authentication & Access Control,2,,,,,,,,
+,,,M,"POST /auth/login with {""username"":""alice"",""password"":""alice12345""}",,,"Assert: 200; JSON has token (≥32 chars, random-looking) and ""role"":""admin""",5,1,0.75
+,,,M,Login fails (bad password),,,Assert: 401 and application/problem+json body type ends /unauthorized,5,1,0.25
+,,,M,"Token required on protected route: 
+Test: GET /alerts with no Authorization header",,,Assert: 401,5,1,0.5
+,,,M,"Operator access allowed: 
+Test: log in as bob, then GET /alerts with Bearer <token>",,,Assert: 200,5,1,0.5
+,,,M,"Operator access denied (role escalation): 
+Test: bob token on POST /auth/assign-role",,,Assert: 403,5,1,0.5
+,,,M,"Admin assigns role: 
+Test: alice token, POST /auth/assign-role {""username"":""user"",""role"":""operator""}",,,Assert: 204 and login as user returns operator role,5,1,0.5
+,,,M,"Admin cannot drop own admin: 
+Test: alice token tries to set role=operator for alice",,,Assert: 409,5,1,0.25
+C3,Turbine Data & Freshness,2,,,,,,,,
+,,,M,"List turbines public: 
+Test: GET /turbines",,,"Assert: 200; array items include id,name,location,status",5,1,1
+,,,M,"Live status:
+Test: Upstream healthy; GET /turbines/1/status",,,"Assert: freshness:""live"" at root and for every property",5,1,1
+,,,M,"Cached fallback:
+Test: Simulate upstream timeout; GET /turbines/1/status",,,"Assert: freshness:""cached""; values unchanged from previous live call",5,1,1
+,,,M,"Missing property handling:
+Test: Upstream returns temperature:null; GET /turbines/1/status",,,"Assert: temperature.freshness:""missing"" and value:null",5,1,0.5
+,,,M,"Unknown turbine:
+Test: GET /turbines/999/status",,,Assert: 404,5,1,0.5
+C4,Control & Action Log,2,,,,,,,,
+,,,M,"Valid pitch/yaw:
+Test: bob token, POST /turbines/1/control {""pitch"":10,""yaw"":180}",,,"Assert: 200 {status:""success""}; /turbines/1/actions newest item type:""control"" with given values",5,1,1.5
+,,,M,"Range validation:
+Test: pitch = -120",,,Assert: 400 Problem+JSON with field error for pitch,5,1,0.25
+,,,M,"Valid state transition:
+Test: shutdown then start sequence using correct endpoints",,,Assert: each returns 200; turbine status updates accordingly,5,1,1
+,,,M,"Invalid transition:
+Test: POST /turbines/1/maintenance while status = started",,,Assert: 409,5,1,0.25
+C5,Alerts Lifecycle,2,,,,,,,,
+,,,M,"High-RPM alert fires:
+Test: mock rpm = 70; fetch status",,,"Assert: /alerts contains alert type:""HighRPM"", status:""firing""",5,1,1.5
+,,,M,"Alert deduplication:
+Test: repeat fetch while rpm still mocked to be 70",,,Assert: still one HighRPM alert record (no duplicates),5,1,0.5
+,,,M,"Alert resolves:
+Test: rpm above 70, fetch status, rpm drops to 50; fetch status",,,"Assert: alert for HighRPM with status:""resolved""",5,1,0.25
+,,,M,"Acknowledge:
+Test: POST /alerts/{id}/ack as bob",,,"Assert: 200 {status:""acknowledged""}; alert field acknowledged:""acknowledged""",5,1,0.5
+C6,Log Retrieval & Search,2,,,,,,,,
+,,,M,"Initial fetch & parse:
+Test: alice token, GET /turbines/1/logs",,,"Assert: 200; JSON entries ≤ 1000, sorted oldest→newest, each entry has level,timestamp,message",5,1,1
+,,,M,"No duplicates on second fetch:
+Test: GET /turbines/1/logs repeatedly",,,Assert: entry count unchanged; first entry timestamps identical,5,1,0.25
+,,,M,"Level filter:
+Test: GET /turbines/1/logs?levels=error,warning",,,"Assert: every entry level ∈ {error,warning}",5,1,0.25
+,,,M,"Message substring filter
+Test: GET /turbines/1/logs?message=wind",,,Assert: every message contains “wind” (case-insensitive),5,1,0.25
+,,,M,"Upstream failure fallback:
+Test: simulate 500 from external logs; request logs",,,Assert: 200 with cached entries,5,1,0.25
